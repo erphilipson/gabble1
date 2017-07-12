@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabble</title>
+  </head>
+  <body>
+
+    <div class="links">
+      <a href="./feed">Gabble</a>
+      <a href="./newGab">Create a new gab</a>
+      <a href="/">Log in</a>
+      <a href="./signup">Sign up</a>
+    </div>
+
+    {{#postOrder}}
+      <p>{{message}}</p>
+      <p>{{likes}} likes</p> <form action="/feed" method="post"><input type="submit" value="Like"></form>
+      <p>{{createdAt}}</p>
+      <hr>
+    {{/postOrder}}
+
+
+  </body>
+</html>

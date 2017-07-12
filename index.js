@@ -22,6 +22,8 @@ app.set('view engine', 'mustache');
 
 app.use(routes);
 
-app.listen(3000, function(){
-  console.log('Connected so good!')
-})
+app.set('port', (process.env.PORT || 5000));
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
